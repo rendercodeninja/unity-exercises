@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="CharacterItem" src="project://database/Assets/UI%20Toolkit/CharacterItem/CharacterItem.uxml?fileID=9197481963319205126&amp;guid=95ed46b9d17ac5943bf3c05fa9fe4415&amp;type=3#CharacterItem" />
+    <Style src="project://database/Assets/UI%20Toolkit/global.uss?fileID=7433441132597879392&amp;guid=58a4a4ea4234243459b6b5229889a50d&amp;type=3#global" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:VisualElement name="Row-01" class="row" style="margin-bottom: 0;">
+            <ui:Instance template="CharacterItem" name="CItem-01" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-02" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-03" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-04" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-05" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-06" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-07" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-08" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-09" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-10" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-11" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-12" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-13" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-14" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-15" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-16" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-17" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-18" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-19" class="root" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Row-01" class="row" style="margin-bottom: 0;">
+            <ui:Instance template="CharacterItem" name="CItem-01" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-02" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-03" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-04" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-05" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-06" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-07" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-08" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-09" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-10" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-11" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-12" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-13" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-14" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-15" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-16" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-17" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-18" class="root" />
+            <ui:Instance template="CharacterItem" name="CItem-19" class="root" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
