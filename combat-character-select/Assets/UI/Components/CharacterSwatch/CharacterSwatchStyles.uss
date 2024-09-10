@@ -1,0 +1,13 @@
+.container {
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 100px;
+}
+
+.cursor {
+    background-image: url("project://database/Assets/Textures/TestSprite.psd?fileID=21300000&guid=40550ccb3e21fc54783f302a25213483&type=3#TestSprite");
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition-duration: 0.2s;
+}

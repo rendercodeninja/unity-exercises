@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Components/CharacterSwatch/CharacterSwatchStyles.uss?fileID=7433441132597879392&amp;guid=9f7141af645128a448333b516184638c&amp;type=3#CharacterSwatchStyles" />
+    <ui:VisualElement name="container" class="container" style="flex-grow: 1;">
+        <ui:VisualElement name="cursor" class="cursor" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

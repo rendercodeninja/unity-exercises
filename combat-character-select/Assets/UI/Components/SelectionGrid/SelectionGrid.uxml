@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="CharacterSwatch" src="project://database/Assets/UI/Components/CharacterSwatch/CharacterSwatch.uxml?fileID=9197481963319205126&amp;guid=e42a1fa89bb10f541bc5179535eed369&amp;type=3#CharacterSwatch" />
+    <Style src="project://database/Assets/UI/Components/SelectionGrid/SelectionGridStyles.uss?fileID=7433441132597879392&amp;guid=7fb69ceb520fa5343a7e2622e314be93&amp;type=3#SelectionGridStyles" />
+    <ui:VisualElement name="container" class="container" style="position: absolute; bottom: 0; margin-bottom: 128px;">
+        <ui:VisualElement name="row-0" class="row">
+            <ui:Instance template="CharacterSwatch" name="swatch-0" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-1" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-2" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-3" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-4" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-5" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-6" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-7" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-8" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-9" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-10" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-11" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-12" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-13" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-14" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-15" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-16" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-17" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-18" class="swatch" />
+        </ui:VisualElement>
+        <ui:VisualElement name="row-1" class="row">
+            <ui:Instance template="CharacterSwatch" name="swatch-0" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-1" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-2" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-3" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-4" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-5" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-6" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-7" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-8" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-9" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-10" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-11" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-12" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-13" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-14" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-15" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-16" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-17" class="swatch" />
+            <ui:Instance template="CharacterSwatch" name="swatch-18" class="swatch" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
