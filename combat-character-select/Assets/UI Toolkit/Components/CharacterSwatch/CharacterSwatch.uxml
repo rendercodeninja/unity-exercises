@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Components/CharacterSwatch/CharacterSwatchStyles.uss?fileID=7433441132597879392&amp;guid=9f7141af645128a448333b516184638c&amp;type=3#CharacterSwatchStyles" />
-    <ui:VisualElement name="container" class="container" style="flex-grow: 1;">
-        <ui:VisualElement name="cursor" class="cursor" style="flex-grow: 1;" />
+    <ui:VisualElement name="container" class="container">
+        <ui:VisualElement name="icon" class="overlay" />
+        <ui:VisualElement name="border" class="overlay" style="background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-ink-frame.png?fileID=2800000&amp;guid=32386481292998b4dbe53f44ee194fbd&amp;type=3#swatch-ink-frame&quot;);" />
+        <ui:VisualElement name="cursor" class="overlay cursor" />
     </ui:VisualElement>
 </ui:UXML>

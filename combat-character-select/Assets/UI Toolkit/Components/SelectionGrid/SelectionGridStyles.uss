@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    background-color: rgb(199, 178, 18);
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 16px;
@@ -17,7 +16,7 @@
     margin-left: 8px;
     margin-right: 8px;
     width: 100%;
-    height: 92px;
+    height: 100px;
     margin-top: 8px;
     margin-bottom: 8px;
 }

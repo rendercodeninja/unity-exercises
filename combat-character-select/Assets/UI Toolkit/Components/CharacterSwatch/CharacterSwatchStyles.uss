@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    height: 100px;
+    background-image: url("project://database/Assets/Textures/Sprites/swatch-base-gradient.png?fileID=2800000&guid=eeec3912f1d0cf4478065621bd840a1f&type=3#swatch-base-gradient");
+    flex-grow: 1;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition-duration: 0.2s;
+    background-image: url("project://database/Assets/Textures/Sprites/swatch-cursor.psd?fileID=2800000&guid=40550ccb3e21fc54783f302a25213483&type=3#swatch-cursor");
+}
