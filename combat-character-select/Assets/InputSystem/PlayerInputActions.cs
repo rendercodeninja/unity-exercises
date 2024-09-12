@@ -28,42 +28,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""039db848-84f0-465a-925c-0fc7266db83e"",
             ""actions"": [
                 {
-                    ""name"": ""DirectionUp"",
-                    ""type"": ""Button"",
-                    ""id"": ""0135873b-08f3-4dab-bb8d-a4d03f8dcef3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""DirectionDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""57e8ba86-1691-48ff-8d10-48c47bbf9a40"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""DirectionLeft"",
-                    ""type"": ""Button"",
-                    ""id"": ""a6a9b319-6038-4583-965a-e62a028dfcf1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""DirectionRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""68810c93-94a9-4ff5-a9ee-f80779892c32"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""AxisInput"",
                     ""type"": ""Value"",
                     ""id"": ""463f9587-91bd-4d59-8014-0b33b6fe79fc"",
@@ -74,50 +38,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""d9a33218-edc9-4557-a1af-ab5f9e57857c"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DirectionUp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""dac0d78d-bda2-45da-b70d-0d7dd3277675"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DirectionDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2e17c291-512d-4e35-a40f-377e1acf9f81"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DirectionLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0fdb726e-9266-4595-81cc-b2c4c8b50925"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DirectionRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""0ac4dcd7-b41f-4e96-b337-9d733a53bc8a"",
@@ -180,10 +100,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_DirectionUp = m_UI.FindAction("DirectionUp", throwIfNotFound: true);
-        m_UI_DirectionDown = m_UI.FindAction("DirectionDown", throwIfNotFound: true);
-        m_UI_DirectionLeft = m_UI.FindAction("DirectionLeft", throwIfNotFound: true);
-        m_UI_DirectionRight = m_UI.FindAction("DirectionRight", throwIfNotFound: true);
         m_UI_AxisInput = m_UI.FindAction("AxisInput", throwIfNotFound: true);
     }
 
@@ -246,19 +162,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
-    private readonly InputAction m_UI_DirectionUp;
-    private readonly InputAction m_UI_DirectionDown;
-    private readonly InputAction m_UI_DirectionLeft;
-    private readonly InputAction m_UI_DirectionRight;
     private readonly InputAction m_UI_AxisInput;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @DirectionUp => m_Wrapper.m_UI_DirectionUp;
-        public InputAction @DirectionDown => m_Wrapper.m_UI_DirectionDown;
-        public InputAction @DirectionLeft => m_Wrapper.m_UI_DirectionLeft;
-        public InputAction @DirectionRight => m_Wrapper.m_UI_DirectionRight;
         public InputAction @AxisInput => m_Wrapper.m_UI_AxisInput;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
@@ -269,18 +177,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
-            @DirectionUp.started += instance.OnDirectionUp;
-            @DirectionUp.performed += instance.OnDirectionUp;
-            @DirectionUp.canceled += instance.OnDirectionUp;
-            @DirectionDown.started += instance.OnDirectionDown;
-            @DirectionDown.performed += instance.OnDirectionDown;
-            @DirectionDown.canceled += instance.OnDirectionDown;
-            @DirectionLeft.started += instance.OnDirectionLeft;
-            @DirectionLeft.performed += instance.OnDirectionLeft;
-            @DirectionLeft.canceled += instance.OnDirectionLeft;
-            @DirectionRight.started += instance.OnDirectionRight;
-            @DirectionRight.performed += instance.OnDirectionRight;
-            @DirectionRight.canceled += instance.OnDirectionRight;
             @AxisInput.started += instance.OnAxisInput;
             @AxisInput.performed += instance.OnAxisInput;
             @AxisInput.canceled += instance.OnAxisInput;
@@ -288,18 +184,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IUIActions instance)
         {
-            @DirectionUp.started -= instance.OnDirectionUp;
-            @DirectionUp.performed -= instance.OnDirectionUp;
-            @DirectionUp.canceled -= instance.OnDirectionUp;
-            @DirectionDown.started -= instance.OnDirectionDown;
-            @DirectionDown.performed -= instance.OnDirectionDown;
-            @DirectionDown.canceled -= instance.OnDirectionDown;
-            @DirectionLeft.started -= instance.OnDirectionLeft;
-            @DirectionLeft.performed -= instance.OnDirectionLeft;
-            @DirectionLeft.canceled -= instance.OnDirectionLeft;
-            @DirectionRight.started -= instance.OnDirectionRight;
-            @DirectionRight.performed -= instance.OnDirectionRight;
-            @DirectionRight.canceled -= instance.OnDirectionRight;
             @AxisInput.started -= instance.OnAxisInput;
             @AxisInput.performed -= instance.OnAxisInput;
             @AxisInput.canceled -= instance.OnAxisInput;
@@ -322,10 +206,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public UIActions @UI => new UIActions(this);
     public interface IUIActions
     {
-        void OnDirectionUp(InputAction.CallbackContext context);
-        void OnDirectionDown(InputAction.CallbackContext context);
-        void OnDirectionLeft(InputAction.CallbackContext context);
-        void OnDirectionRight(InputAction.CallbackContext context);
         void OnAxisInput(InputAction.CallbackContext context);
     }
 }
