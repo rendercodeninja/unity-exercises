@@ -1,18 +1,15 @@
+using CombatEngine.Schemas;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class SelectionMenuController : MonoBehaviour
 {
     //Reference to the ui document
     [SerializeField] private UIDocument uiDocument;
+    [SerializeField] private SOCharacterData characterData;
 
     //2D array holding reference to individual selection swatch
     private VisualElement[,] mItemsArray;
-    //Number of columns in the selection grid
-    private readonly int mNumCols = 19;
-    //Number of rows in the selection grid
-    private readonly int mNumRows = 2;
 
     //Current row and column index
     private int currentRowIndex = 0;
@@ -60,7 +57,7 @@ public class SelectionMenuController : MonoBehaviour
     void Start()
     {
         //Initialize the array for the selection grid
-        mItemsArray = new VisualElement[mNumRows, mNumCols];
+        mItemsArray = new VisualElement[characterData.rowCount, characterData.columnCount];
 
         //Get the root element in the ui doument
         var rootElement = uiDocument.rootVisualElement;
@@ -68,18 +65,25 @@ public class SelectionMenuController : MonoBehaviour
         var container = rootElement.Q<VisualElement>("container");
 
         //Iterate through each row
-        for (int row = 0; row < mNumRows; row++)
+        for (int row = 0; row < characterData.rowCount; row++)
         {
             //Get current row reference by name
             string rowName = $"row-{row}";
             var currentRow = container.Q<VisualElement>(rowName);
 
             //Iterate through each column
-            for (int col = 0; col < mNumCols; col++)
+            for (int col = 0; col < characterData.columnCount; col++)
             {
                 //Get swatch at current row, column index
                 string swatchName = $"swatch-{col}";
-                mItemsArray[row, col] = currentRow.Q<VisualElement>(swatchName);
+
+                var swatchItem = currentRow.Q<VisualElement>(swatchName);
+
+                var icon = swatchItem.Q<VisualElement>("icon");
+
+                icon.style.backgroundImage = new StyleBackground(characterData.GetRowByIndex(row)[col].profileIcon);
+
+                mItemsArray[row, col] = swatchItem;
             }
         }
 
@@ -107,8 +111,8 @@ public class SelectionMenuController : MonoBehaviour
         ClearCursor(currentRowIndex, currentColIndex);
 
         // Update row and column indices with wrapping
-        currentRowIndex = (currentRowIndex + rowDelta + mNumRows) % mNumRows;
-        currentColIndex = (currentColIndex + colDelta + mNumCols) % mNumCols;
+        currentRowIndex = (currentRowIndex + rowDelta + characterData.rowCount) % characterData.rowCount;
+        currentColIndex = (currentColIndex + colDelta + characterData.columnCount) % characterData.columnCount;
 
         //Set cursor to new index
         SetCursor(currentRowIndex, currentColIndex);
