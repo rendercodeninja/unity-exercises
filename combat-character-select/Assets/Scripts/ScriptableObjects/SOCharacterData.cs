@@ -8,7 +8,7 @@ namespace CombatEngine.Schemas
     {
         //Fixed dimension grid
         public readonly int rowCount = 2;
-        public readonly int columnCount = 17;
+        public readonly int columnCount = 12;
 
         [System.Serializable]
         public class CharacterData

@@ -16,7 +16,13 @@
     margin-left: 8px;
     margin-right: 8px;
     width: 100%;
-    height: 100px;
+    height: 130px;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+.group {
+    flex-direction: row;
+    margin-right: 32px;
+    margin-left: 32px;
 }

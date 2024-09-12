@@ -37,16 +37,6 @@ MonoBehaviour:
     profileIcon: {fileID: 21300000, guid: 408cfc66764ceed428941dd5f2582fd4, type: 3}
   - characterName: Kyra Stormfist
     profileIcon: {fileID: 21300000, guid: c76ec9c37d5420d4099847a0c21b7f55, type: 3}
-  - characterName: Malik Dreadspire
-    profileIcon: {fileID: 21300000, guid: 408cfc66764ceed428941dd5f2582fd4, type: 3}
-  - characterName: Yssra Flamestrike
-    profileIcon: {fileID: 21300000, guid: a491a1fe1f81db447bf5fceefc2f27a1, type: 3}
-  - characterName: Aegis Starborn
-    profileIcon: {fileID: 21300000, guid: 242612a329f5f234cb4e1259030faec0, type: 3}
-  - characterName: Orin Shadowfall
-    profileIcon: {fileID: 21300000, guid: 6b98587edd236d141ad2287c8fb7e329, type: 3}
-  - characterName: Zephyr Frostfang
-    profileIcon: {fileID: 21300000, guid: 408cfc66764ceed428941dd5f2582fd4, type: 3}
   row1:
   - characterName: Daelin Moonstrike
     profileIcon: {fileID: 21300000, guid: 6b98587edd236d141ad2287c8fb7e329, type: 3}
@@ -72,13 +62,3 @@ MonoBehaviour:
     profileIcon: {fileID: 21300000, guid: 8cfa5d371c0243f448bb6fe3753538e5, type: 3}
   - characterName: Thorne Darkclaw
     profileIcon: {fileID: 21300000, guid: a491a1fe1f81db447bf5fceefc2f27a1, type: 3}
-  - characterName: Kira Bladewind
-    profileIcon: {fileID: 21300000, guid: 51a05104c07e3684a9faf8fa6e96bee2, type: 3}
-  - characterName: Zarek Stonebreaker
-    profileIcon: {fileID: 21300000, guid: 242612a329f5f234cb4e1259030faec0, type: 3}
-  - characterName: Valen Stormsinger
-    profileIcon: {fileID: 21300000, guid: 8cfa5d371c0243f448bb6fe3753538e5, type: 3}
-  - characterName: Tarak Grimclaw
-    profileIcon: {fileID: 21300000, guid: 408cfc66764ceed428941dd5f2582fd4, type: 3}
-  - characterName: Selene Starshade
-    profileIcon: {fileID: 21300000, guid: 6b98587edd236d141ad2287c8fb7e329, type: 3}
