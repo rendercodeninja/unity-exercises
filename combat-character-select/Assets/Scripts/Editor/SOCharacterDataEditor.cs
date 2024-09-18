@@ -1,6 +1,4 @@
-using CombatEngine.Schemas;
 using UnityEditor;
-using UnityEngine;
 
 [CustomEditor(typeof(SOCharacterData))]
 public class SOCharacterDataEditor : Editor
