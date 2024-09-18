@@ -28,7 +28,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""039db848-84f0-465a-925c-0fc7266db83e"",
             ""actions"": [
                 {
-                    ""name"": ""AxisInput"",
+                    ""name"": ""AxisAction"",
                     ""type"": ""Value"",
                     ""id"": ""463f9587-91bd-4d59-8014-0b33b6fe79fc"",
                     ""expectedControlType"": """",
@@ -39,13 +39,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""WASD"",
                     ""id"": ""0ac4dcd7-b41f-4e96-b337-9d733a53bc8a"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AxisInput"",
+                    ""action"": ""AxisAction"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -55,8 +55,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AxisInput"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""AxisAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -66,8 +66,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AxisInput"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""AxisAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -77,8 +77,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AxisInput"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""AxisAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -88,19 +88,97 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""AxisAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""LeftStick"",
+                    ""id"": ""8980ccfe-70b7-44ad-bd98-a0935e7da44f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AxisInput"",
+                    ""action"": ""AxisAction"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f356c7bc-ee1b-48c3-8955-19658e00796b"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""AxisAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""871c99d9-e74f-4747-afa4-106b927b2c11"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""AxisAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""ade7031c-5bf6-4239-85c3-1069a4a34ff9"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""AxisAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""1ff45d60-a3a4-4bfe-9a58-a512db37b143"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""AxisAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Controller"",
+            ""bindingGroup"": ""Controller"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_AxisInput = m_UI.FindAction("AxisInput", throwIfNotFound: true);
+        m_UI_AxisAction = m_UI.FindAction("AxisAction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,12 +240,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
-    private readonly InputAction m_UI_AxisInput;
+    private readonly InputAction m_UI_AxisAction;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @AxisInput => m_Wrapper.m_UI_AxisInput;
+        public InputAction @AxisAction => m_Wrapper.m_UI_AxisAction;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -177,16 +255,16 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
-            @AxisInput.started += instance.OnAxisInput;
-            @AxisInput.performed += instance.OnAxisInput;
-            @AxisInput.canceled += instance.OnAxisInput;
+            @AxisAction.started += instance.OnAxisAction;
+            @AxisAction.performed += instance.OnAxisAction;
+            @AxisAction.canceled += instance.OnAxisAction;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
         {
-            @AxisInput.started -= instance.OnAxisInput;
-            @AxisInput.performed -= instance.OnAxisInput;
-            @AxisInput.canceled -= instance.OnAxisInput;
+            @AxisAction.started -= instance.OnAxisAction;
+            @AxisAction.performed -= instance.OnAxisAction;
+            @AxisAction.canceled -= instance.OnAxisAction;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -204,8 +282,26 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
+    private int m_ControllerSchemeIndex = -1;
+    public InputControlScheme ControllerScheme
+    {
+        get
+        {
+            if (m_ControllerSchemeIndex == -1) m_ControllerSchemeIndex = asset.FindControlSchemeIndex("Controller");
+            return asset.controlSchemes[m_ControllerSchemeIndex];
+        }
+    }
     public interface IUIActions
     {
-        void OnAxisInput(InputAction.CallbackContext context);
+        void OnAxisAction(InputAction.CallbackContext context);
     }
 }

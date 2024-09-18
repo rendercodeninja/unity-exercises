@@ -1,15 +1,6 @@
-.container {
-    width: 100%;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
 .row {
     width: 100%;
     flex-direction: row;
-    margin-left: 0;
 }
 
 .swatch {
@@ -25,4 +16,11 @@
     flex-direction: row;
     margin-right: 32px;
     margin-left: 32px;
+}
+
+.player-label {
+    -unity-font: url("project://database/Assets/Fonts/Teko/Teko-Regular.ttf?fileID=12800000&guid=22bf32795da36984b94e7b917f916afd&type=3#Teko-Regular");
+    font-size: 50px;
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
 }
