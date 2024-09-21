@@ -13,6 +13,8 @@ public class SOCharacterData : ScriptableObject
     {
         public string characterName;
         public Sprite profileIcon;
+        public CharacterModel p1Prefab;
+        public CharacterModel p2Prefab;
     }
 
     //List holding character data for Row0
@@ -29,6 +31,15 @@ public class SOCharacterData : ScriptableObject
             1 => row1,
             _ => null,
         };
+    }
+
+    //Returns a CharacterData object by row/col index
+    public CharacterData GetByIndex(int row, int col)
+    {
+        //Finalize the target row
+        var charRow = row == 0 ? row0 : row1;
+        //Return the resultant by col
+        return charRow[col];
     }
 }
 

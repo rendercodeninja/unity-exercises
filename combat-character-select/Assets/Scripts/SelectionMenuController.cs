@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class SelectionMenuController : MonoBehaviour
@@ -13,6 +14,7 @@ public class SelectionMenuController : MonoBehaviour
     //Reference to the ui document
     [SerializeField] private UIDocument uiDocument;
     [SerializeField] private SOCharacterData characterData;
+    [SerializeField,Space(10)] private UnityEvent<SelectorHandler> OnCharacterSelect;
     #endregion
 
     #region Private Fields
@@ -136,6 +138,9 @@ public class SelectionMenuController : MonoBehaviour
         //Update character selection for Player-1 if ready
         if (mSelectorPlayer1.IsReady)
             UpdateCharacterSelection(mSelectorPlayer1);
+
+        if (mSelectorPlayer2.IsReady)
+            UpdateCharacterSelection(mSelectorPlayer2);
     }
 
     //Updates the character selection for specific player 
@@ -148,8 +153,8 @@ public class SelectionMenuController : MonoBehaviour
             selector.LastMoveTime = Time.time + moveDelay;
 
             // Handle movement based on input (Y axis is inverted for up/down)
-            int rowDelta = (int)Mathf.Clamp(-mSelectorPlayer1.AxisInputValue.y, -1, 1);  // Up/Down
-            int colDelta = (int)Mathf.Clamp(mSelectorPlayer1.AxisInputValue.x, -1, 1);   // Left/Right
+            int rowDelta = (int)Mathf.Clamp(-selector.AxisInputValue.y, -1, 1);  // Up/Down
+            int colDelta = (int)Mathf.Clamp(selector.AxisInputValue.x, -1, 1);   // Left/Right
 
             //Clear current cursor
             SetCursor(selector.Index, selector.Row, selector.Column, false);
@@ -164,6 +169,9 @@ public class SelectionMenuController : MonoBehaviour
             //Set Character name
             string name = characterData.GetRowByIndex(selector.Row)[selector.Column].characterName;
             selector.SetCharacterName(name);
+
+            //Invoke event for external components
+            OnCharacterSelect?.Invoke(selector);            
         }
     }
 
@@ -215,6 +223,9 @@ public class SelectionMenuController : MonoBehaviour
                 //Set label value
                 string name = characterData.GetRowByIndex(selector.Row)[selector.Column].characterName;
                 selector.SetCharacterName(name);
+
+                //Invoke event for external components
+                OnCharacterSelect?.Invoke(selector);
 
                 //State player selector is ready
                 selector.IsReady = true;

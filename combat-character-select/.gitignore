@@ -74,3 +74,6 @@ crashlytics-build.properties
 # DOTween Package
 /Assets/Plugins/Demigiant/*
 /Assets/Plugins/Demigiant.meta
+
+# Blender Backups
+*.blend1
