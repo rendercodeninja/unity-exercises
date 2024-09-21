@@ -17,12 +17,14 @@ MonoBehaviour:
     profileIcon: {fileID: 21300000, guid: 8b4d89dd731ae424e9766ef8c1c97171, type: 3}
     p1Prefab: {fileID: 8723475589442943658, guid: ea94335eb85fafe40a488ef46107c784,
       type: 3}
-    p2Prefab: {fileID: 0}
+    p2Prefab: {fileID: 8723475589442943658, guid: 070f76046420ca14cb01dd9b66508553,
+      type: 3}
   - characterName: Sereia Vox
     profileIcon: {fileID: 21300000, guid: af0d70379e5d6a84393b6fbf02cf7251, type: 3}
     p1Prefab: {fileID: 8723475589442943658, guid: 066d81d9d61b8e64cb927ee021078a39,
       type: 3}
-    p2Prefab: {fileID: 0}
+    p2Prefab: {fileID: 8723475589442943658, guid: e386d6f8ed48d444bb8b2e44dc7b4df3,
+      type: 3}
   - characterName: Varok Blacksteel
     profileIcon: {fileID: 21300000, guid: 8cfa5d371c0243f448bb6fe3753538e5, type: 3}
     p1Prefab: {fileID: 8723475589442943658, guid: 7d729cf575632ba4bb203b22ec274942,

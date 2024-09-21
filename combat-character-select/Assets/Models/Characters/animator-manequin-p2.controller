@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: animator-manequin-p1
+  m_Name: animator-manequin-p2
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6796905255079364718, guid: 6827aaad2b7b9d3469efc1bd4960fadd,
+  m_Motion: {fileID: 4449660053957112759, guid: 6827aaad2b7b9d3469efc1bd4960fadd,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
