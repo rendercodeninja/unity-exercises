@@ -76,49 +76,61 @@ MonoBehaviour:
   row1:
   - characterName: Daelin Moonstrike
     profileIcon: {fileID: 21300000, guid: 6b98587edd236d141ad2287c8fb7e329, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: ad0d1274ffbd6ab4ea6714288cf873ff,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Seraphis Darkbane
     profileIcon: {fileID: 21300000, guid: 242612a329f5f234cb4e1259030faec0, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: f92b932dbed136b44a41fc7d4fd24164,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Valon Wraithsong
     profileIcon: {fileID: 21300000, guid: 408cfc66764ceed428941dd5f2582fd4, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 1141c3938ee2eb74c9d2f0b5138b292b,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Xara Flameheart
     profileIcon: {fileID: 21300000, guid: 51a05104c07e3684a9faf8fa6e96bee2, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 2dd7ddf8b9b94c54fac8f6af6e02f10d,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Kaelor Voidwalker
     profileIcon: {fileID: 21300000, guid: c76ec9c37d5420d4099847a0c21b7f55, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 0f3d0d127a5814f4caff9be1d33f8cea,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Nyssa Ironfang
     profileIcon: {fileID: 21300000, guid: a491a1fe1f81db447bf5fceefc2f27a1, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 115a4fbb17cf9a449a954d243422058d,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Ryker Thornblade
     profileIcon: {fileID: 21300000, guid: af0d70379e5d6a84393b6fbf02cf7251, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: d2f263d6354317f45aa74a86a5eebc71,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Azara Shadowtalon
     profileIcon: {fileID: 21300000, guid: 8b4d89dd731ae424e9766ef8c1c97171, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 02aeb89ae0585574491fca1b6d1cdc6c,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Aric Skybreaker
     profileIcon: {fileID: 21300000, guid: c76ec9c37d5420d4099847a0c21b7f55, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 7700bcc85add9ce469fdd61911132546,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Lira Stormblade
     profileIcon: {fileID: 21300000, guid: 6b98587edd236d141ad2287c8fb7e329, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 23000fda4f4876047b3453db1a314177,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Darek Frostguard
     profileIcon: {fileID: 21300000, guid: 8cfa5d371c0243f448bb6fe3753538e5, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: f23ea6b255c60d24ab3be4ecf360bdcc,
+      type: 3}
     p2Prefab: {fileID: 0}
   - characterName: Thorne Darkclaw
     profileIcon: {fileID: 21300000, guid: a491a1fe1f81db447bf5fceefc2f27a1, type: 3}
-    p1Prefab: {fileID: 0}
+    p1Prefab: {fileID: 8723475589442943658, guid: 7861684a2a25df7489336be6e8d8d0cb,
+      type: 3}
     p2Prefab: {fileID: 0}
