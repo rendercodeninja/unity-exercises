@@ -24,6 +24,13 @@ public class SelectionMenuController : MonoBehaviour
     private readonly SelectorHandler mSelectorPlayer2 = new(1);
     #endregion
 
+    //Unity - Awake
+    private void Awake()
+    {
+        //Lock to 60FPS
+        Application.targetFrameRate = 60;
+    }
+
     //Custom class to handle selection data
     public class SelectorHandler
     {
