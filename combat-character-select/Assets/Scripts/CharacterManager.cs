@@ -1,23 +1,52 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
-using UnityEngine.Rendering.Universal;
-using Unity.Mathematics;
-using static UnityEngine.Rendering.DebugUI.Table;
-using System;
+using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-
+    #region Inspector Fields
     [SerializeField] private SOCharacterData characterData;
     [SerializeField] private Transform socketP1;
     [SerializeField] private Transform socketP2;
+    #endregion
 
+    #region Private Fields
     private List<CharacterModel> mP1ModelCollection = new();
     private List<CharacterModel> mP2ModelCollection = new();
-
     private CharacterModel mActiveP1Model, mActiveP2Model;
+    #endregion
 
+    #region Static Fields
+    private static readonly string[] mLastIdleClips = new string[2];
+    private static readonly string[] mIdleClips = { "idle-mk1", "idle-mk2", "idle-mk3" };
+    #endregion
+
+    //Get a non repeating random clip from idle clips
+    public static string GetNonRepeatingRandomClip(int playerIndex)
+    {
+        //Throw error if wrong player index
+        if (playerIndex > 1)
+            throw new System.Exception("Player index cannot be greater than 2");
+
+        //Resultant clip
+        string clip;
+
+        do
+        {
+            //Get random index for clip
+            int randomIndex = Random.Range(0, mIdleClips.Length);
+            //Get the clip
+            clip = mIdleClips[randomIndex];
+        }
+        //Loop until the new clip is not same as the last one for player index
+        while (clip == mLastIdleClips[playerIndex]);
+
+        //Update last clip string
+        mLastIdleClips[playerIndex] = clip;
+
+        //Return the resultant clip
+        return clip;
+    }
 
     public void OnCharacterChange(SelectionMenuController.SelectorHandler selector)
     {
@@ -48,6 +77,8 @@ public class CharacterManager : MonoBehaviour
             var character = Instantiate(targetPrefab, targetSocket);
             //Reset transform
             character.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            //Set index
+            character.PlayerIndex = selector.Index;
 
             //Add to target collection
             targetCollection.Add(character);
@@ -81,4 +112,11 @@ public class CharacterManager : MonoBehaviour
             }
         }
     }
+
+    
+
+    
+
+
+    
 }

@@ -15,10 +15,14 @@ public class CharacterModel : MonoBehaviour
 
     #region Private Fields
     private Material[] mMaterials;
+    private Animator mAnimator;
+    
     #endregion
 
     private void Awake()
     {
+        //Get reference to the animator component
+        mAnimator = GetComponent<Animator>();        
         //Get reference to the renderer
         var renderer = GetComponentInChildren<Renderer>();
         //Cache reference to all materials
@@ -32,11 +36,14 @@ public class CharacterModel : MonoBehaviour
         //Reset effect to 0
         SetEffectValue(0.0f);
 
+        //Set random idle clip
+        mAnimator.Play(CharacterManager.GetNonRepeatingRandomClip(PlayerIndex));
+
         //Star the FadeIn
         StartFade(0.0f, 1.0f);
     }
 
-    private void StartFade(float from, float to, float duration = 0.5f)
+    private void StartFade(float from, float to, float duration=0.5f)
     {
         //Compose float Tween
         DOTween.To((val) =>
