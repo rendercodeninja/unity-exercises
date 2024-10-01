@@ -14,7 +14,8 @@ public class SelectionMenuController : MonoBehaviour
     //Reference to the ui document
     [SerializeField] private UIDocument uiDocument;
     [SerializeField] private SOCharacterData characterData;
-    [SerializeField,Space(10)] private UnityEvent<SelectorHandler> OnCharacterSelect;
+    [SerializeField] private AudioManager mAudioManager;    
+    [SerializeField, Space(10)] private UnityEvent<SelectorHandler> OnCharacterSelect;
     #endregion
 
     #region Private Fields
@@ -22,6 +23,7 @@ public class SelectionMenuController : MonoBehaviour
     private VisualElement[,] mSwatchArray;
     private readonly SelectorHandler mSelectorPlayer1 = new(0);
     private readonly SelectorHandler mSelectorPlayer2 = new(1);
+
     #endregion
 
     //Unity - Awake
@@ -178,7 +180,7 @@ public class SelectionMenuController : MonoBehaviour
             selector.SetCharacterName(name);
 
             //Invoke event for external components
-            OnCharacterSelect?.Invoke(selector);            
+            OnCharacterSelect?.Invoke(selector);
         }
     }
 
@@ -193,6 +195,8 @@ public class SelectionMenuController : MonoBehaviour
         var tag = item.Q<VisualElement>(name: playerIndex == 0 ? "cursor-tag-p1" : "cursor-tag-p2");
         //Set cursor opacity
         cursor.style.opacity = tag.style.opacity = isSet ? 1 : 0;
+        //Play cursor change audio
+        mAudioManager.PlayCursorChange(playerIndex);
     }
 
     //Callback Event - Invoked when player input configuration changes
@@ -236,6 +240,9 @@ public class SelectionMenuController : MonoBehaviour
 
                 //State player selector is ready
                 selector.IsReady = true;
+
+                //Play player join audio
+                mAudioManager.PlayPlayerJoin(selector.Index);
             }
         }
         //Else if disconnected

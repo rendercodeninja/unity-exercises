@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -27,15 +25,15 @@ public class AudioManager : MonoBehaviour
     }
 
     //Plays the cursor change audio clip
-    public void PlayCursorChange(int playerIndex)    
+    public void PlayCursorChange(int playerIndex)
     {
         //Get target audio source based on player index
         var targetSource = playerIndex == 0 ? p1AudioSource : p2AudioSource;
 
-        if(targetSource.isPlaying)
+        if (targetSource.isPlaying)
             targetSource.Stop();
 
         //Play cursor change in one shot
-        targetSource.PlayOneShot(cursorChange);    
+        targetSource.PlayOneShot(cursorChange);
     }
 }
