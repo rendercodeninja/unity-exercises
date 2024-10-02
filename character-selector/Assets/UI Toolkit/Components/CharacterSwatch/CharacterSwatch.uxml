@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Components/CharacterSwatch/CharacterSwatchStyles.uss?fileID=7433441132597879392&amp;guid=9f7141af645128a448333b516184638c&amp;type=3#CharacterSwatchStyles" />
+    <ui:VisualElement name="container" class="container" style="-unity-background-image-tint-color: rgb(255, 255, 255);">
+        <ui:VisualElement name="icon" class="overlay" />
+        <ui:VisualElement name="ink-frame" class="overlay" style="background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-ink-frame.png?fileID=2800000&amp;guid=32386481292998b4dbe53f44ee194fbd&amp;type=3#swatch-ink-frame&quot;); opacity: 1;" />
+        <ui:VisualElement name="cursor-p1" class="overlay cursor" style="opacity: 0; background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-cursor-p1.png?fileID=2800000&amp;guid=752a006c66a8397489c5c7c752869e57&amp;type=3#swatch-cursor-p1&quot;);" />
+        <ui:VisualElement name="cursor-p2" class="overlay cursor" style="opacity: 0; background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-cursor-p2.png?fileID=2800000&amp;guid=957d060c21bd1d64f88b9a7334f773cf&amp;type=3#swatch-cursor-p2&quot;);" />
+        <ui:VisualElement name="cursor-tag-p1" class="overlay tags" style="background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-tag-p1.png?fileID=2800000&amp;guid=101ca6d901239104890ccf512bcb374e&amp;type=3#swatch-tag-p1&quot;);" />
+        <ui:VisualElement name="cursor-tag-p2" class="overlay tags" style="background-image: url(&quot;project://database/Assets/Textures/Interface/swatch-tag-p2.png?fileID=2800000&amp;guid=9cf5351cdd39df84da317bae6cc4d601&amp;type=3#swatch-tag-p2&quot;);" />
+    </ui:VisualElement>
+</ui:UXML>
