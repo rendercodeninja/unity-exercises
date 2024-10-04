@@ -2,7 +2,7 @@
 
 Always wanted to create one of those cool character selection screen in fighting games. Well here is my attempt!. 😊
 
-![ScreeShot](Design/screenshots/ss-04.png)
+![ScreeShot](Design/ScreenShots/ss-04.png)
 
 ## How its done!
 For this project, I wanted to try Unity's UIToolkit for the selection grid. One UXML represents all the swatch elements for maximum reusability, while a second UXML acts as the container. The swatch UXML instances are arranged in three sets of 2x4 grids, with styling done using Unity's Style Sheets.
@@ -29,25 +29,25 @@ The project uses DOTween Unity Asset Store package which is not included in the 
 - Upon opening the project you may be shown with a an error dialog, choose 'Enter SafeMode'. This is because the DOTween module is missing and yet to be installed.
 
 <p align="center" width="100%">
-    <img alt="setup-01" src="Design/screenshots/setup-01.png"> 
+    <img alt="setup-01" src="Design/ScreenShots/setup-01.png"> 
 </p>
 
 - Goto `Window -> Package Manager`. Under `Packages:My Assets`, select 'DOTween (HOTween v2)', download and import.
 
 <p align="center" width="100%">
-    <img alt="setup-02" width="75%" src="Design/screenshots/setup-02.png"> 
+    <img alt="setup-02" width="75%" src="Design/ScreenShots/setup-02.png"> 
 </p>
 
 - After importing, click `Open DOTween Utility Panel` button to setup DOTween. (Alternativley you can always open using `Tools -> Demigiant -> DOTween Utility Panel` )
 
 <p align="center" width="100%">
-    <img alt="setup-03" src="Design/screenshots/setup-03.png"> 
+    <img alt="setup-03" src="Design/ScreenShots/setup-03.png"> 
 </p>
 
 - From DOTween Utility Panel, ensure `UI` option is enabled. You can enable other modules for DOTween if you plan on improving.
 
 <p align="center" width="100%">
-    <img alt="setup-04" src="Design/screenshots/setup-04.png"> 
+    <img alt="setup-04" src="Design/ScreenShots/setup-04.png"> 
 </p>
 
 - Click `Apply` and wait for the new assemblies to finish compiling.
